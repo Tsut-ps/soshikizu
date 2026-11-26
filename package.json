@@ -1,0 +1,28 @@
+{
+  "name": "soshikizu",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "build:single": "tsc --noEmit && vite build --mode single",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "deploy": "npm run build && wrangler deploy",
+    "format": "prettier --write src index.html vite.config.ts",
+    "format:check": "prettier --check src vite.config.ts",
+    "check:model": "node scripts/check-model.mjs"
+  },
+  "dependencies": {
+    "motion": "14.10.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.7",
+    "prettier": "^3.6.2",
+    "typescript": "5.9.3",
+    "vite": "8.3.8",
+    "vite-plugin-singlefile": "2.3.4",
+    "wrangler": "4.168.0"
+  }
+}

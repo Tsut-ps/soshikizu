@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "soshikizu",
+  "compatibility_date": "2026-11-01",
+  // Worker のコードは持たず、ビルドした静的ファイルだけを配信する
+  "assets": {
+    "directory": "./dist"
+  }
+}
