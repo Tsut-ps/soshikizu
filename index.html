@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <title>アニメスタジオ組織図</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="i-person" viewBox="0 0 24 24">
+          <circle cx="12" cy="6.5" r="3.6" />
+          <path d="M5 22v-4.2a7 7 0 0 1 14 0V22z" />
+        </symbol>
+        <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V3.5M5 4h13l-2.5 4.5L18 13H5" /></symbol>
+        <symbol id="i-case" viewBox="0 0 24 24">
+          <rect x="3" y="7" width="18" height="13" rx="2" />
+          <path d="M9 7V4.5h6V7M3 12.5h18" />
+        </symbol>
+        <symbol id="i-clip" viewBox="0 0 24 24">
+          <rect x="5" y="4" width="14" height="17" rx="2" />
+          <rect x="9" y="2.5" width="6" height="3.5" rx="1" />
+          <path d="M8.5 11h7M8.5 15h5" />
+        </symbol>
+        <symbol id="i-car" viewBox="0 0 24 24">
+          <path d="M3 16.5v-3l2-5h14l2 5v3zM5 13.5h14" />
+          <circle cx="7.5" cy="17.5" r="1.8" />
+          <circle cx="16.5" cy="17.5" r="1.8" />
+        </symbol>
+        <symbol id="i-clap" viewBox="0 0 24 24">
+          <rect x="3" y="9" width="18" height="11" rx="1.5" />
+          <path d="M3 9l1.2-4.5h16.6L21 9M8.5 4.5 7 9M13.5 4.5 12 9M18.5 4.5 17 9" />
+        </symbol>
+        <symbol id="i-board" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="8" height="6" rx="1" />
+          <rect x="3" y="11" width="8" height="6" rx="1" />
+          <path d="M14 4.5h7M14 7.5h5M14 12.5h7M14 15.5h5M3 21h18" />
+        </symbol>
+        <symbol id="i-script" viewBox="0 0 24 24">
+          <path d="M6 3h9l4 4v14H6zM15 3v4h4M9 11.5h7M9 15h7M9 18.5h4" />
+        </symbol>
+        <symbol id="i-book" viewBox="0 0 24 24">
+          <path
+            d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 21H20v-3"
+          />
+          <circle cx="12" cy="9" r="2.3" />
+          <path d="M8.5 14.5a3.5 3.5 0 0 1 7 0" />
+        </symbol>
+        <symbol id="i-pencil" viewBox="0 0 24 24">
+          <path d="M4 20l1.2-4.6L16 4.6l3.4 3.4L8.6 18.8zM14 6.6l3.4 3.4M4 20h7" />
+        </symbol>
+        <symbol id="i-sheets" viewBox="0 0 24 24">
+          <rect x="7" y="7" width="13" height="14" rx="1.2" />
+          <path d="M4 17V4.5A1.5 1.5 0 0 1 5.5 3H16" />
+          <circle cx="10.5" cy="10" r=".6" />
+          <circle cx="13.5" cy="10" r=".6" />
+          <circle cx="16.5" cy="10" r=".6" />
+        </symbol>
+        <symbol id="i-check" viewBox="0 0 24 24">
+          <circle cx="10.5" cy="10.5" r="6.5" />
+          <path d="M15.3 15.3 20.5 20.5M7.8 10.6l2 2 3.6-4" />
+        </symbol>
+        <symbol id="i-star" viewBox="0 0 24 24">
+          <path d="M4 20l1.2-4.6L13 7.6l3.4 3.4-7.8 7.8zM4 20h7" />
+          <path d="M18 2.5l.9 2 2.1.3-1.5 1.5.4 2.1-1.9-1-1.9 1 .4-2.1L15 4.8l2.1-.3z" />
+        </symbol>
+        <symbol id="i-drop" viewBox="0 0 24 24">
+          <path d="M12 3c4.2 5 6.3 8.4 6.3 11.3a6.3 6.3 0 0 1-12.6 0C5.7 11.4 7.8 8 12 3z" />
+          <path d="M9.2 14.5a2.8 2.8 0 0 0 2.8 2.8" />
+        </symbol>
+        <symbol id="i-mount" viewBox="0 0 24 24">
+          <path d="M2.5 19.5l6.5-10 4.2 6 2.8-3.5 5.5 7.5z" />
+          <circle cx="17" cy="6" r="2" />
+        </symbol>
+        <symbol id="i-camera" viewBox="0 0 24 24">
+          <rect x="3" y="7" width="18" height="13" rx="2" />
+          <circle cx="12" cy="13.5" r="3.8" />
+          <path d="M8 7l1.5-3h5L16 7" />
+        </symbol>
+        <symbol id="i-cube" viewBox="0 0 24 24">
+          <path d="M12 2.8l8 4.5v9.4l-8 4.5-8-4.5V7.3zM4 7.3l8 4.6 8-4.6M12 11.9v9.3" />
+        </symbol>
+        <symbol id="i-cut" viewBox="0 0 24 24">
+          <circle cx="6" cy="6.5" r="2.8" />
+          <circle cx="6" cy="17.5" r="2.8" />
+          <path d="M8.4 8 20 18M8.4 16 20 6" />
+        </symbol>
+        <symbol id="i-mic" viewBox="0 0 24 24">
+          <rect x="9" y="2.8" width="6" height="11" rx="3" />
+          <path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7" />
+        </symbol>
+        <symbol id="i-bldg" viewBox="0 0 24 24">
+          <path d="M4 21V5l8-2.5V21M12 8h8v13M2.5 21h19M7 8h2M7 12h2M7 16h2M15 12h2M15 16h2" />
+        </symbol>
+        <symbol id="i-tag" viewBox="0 0 24 24">
+          <path d="M3 12.5V4h8.5l9.5 9.5-8.5 8.5z" />
+          <circle cx="7.5" cy="8.5" r="1.5" />
+        </symbol>
+        <symbol id="i-cap" viewBox="0 0 24 24">
+          <path d="M2 9.5 12 4.5l10 5-10 5zM6 11.5v4.8c3.5 2.4 8.5 2.4 12 0v-4.8M21 10v5" />
+        </symbol>
+        <symbol id="i-globe" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18" />
+        </symbol>
+        <symbol id="i-reel" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" />
+          <circle cx="12" cy="12" r="1.6" />
+          <circle cx="12" cy="7" r="1.9" />
+          <circle cx="12" cy="17" r="1.9" />
+          <circle cx="7" cy="12" r="1.9" />
+          <circle cx="17" cy="12" r="1.9" />
+        </symbol>
+        <symbol id="i-info" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 11v6M12 7.5v.5" />
+        </symbol>
+        <symbol id="i-hand" viewBox="0 0 24 24">
+          <path
+            d="M2.5 12.5 6 9l4 1.5 3-2.5h3.5l5 4.5M2.5 12.5 7 17l2 0 3 2.5 2-1 2 1 1.5-2 1.5-1.5 2.5-2.5M10 10.5l2.5 2.5M12.5 13l2 2"
+          />
+        </symbol>
+      </defs>
+    </svg>
+    <header class="top">
+      <div class="brand">
+        <h1>アニメスタジオは、何人でどう組むか</h1>
+      </div>
+      <div class="count">
+        <output id="people-count" for="people-slider">20</output><span class="unit-label">人</span>
+      </div>
+      <div class="sourcing" role="group" aria-label="体制の型（内製の度合い）">
+        <span class="sourcing-label">体制の型</span>
+        <div class="segmented" id="sourcing">
+          <button
+            type="button"
+            data-sourcing="outsource"
+            aria-pressed="false"
+            title="外注を多くして、ラインを増やす"
+          >
+            外注型
+          </button>
+          <button
+            type="button"
+            data-sourcing="basic"
+            aria-pressed="true"
+            title="その人数でよく見られる基本の形"
+          >
+            基本
+          </button>
+          <button
+            type="button"
+            data-sourcing="inhouse"
+            aria-pressed="false"
+            title="社内で作る工程を増やし、ラインを絞る"
+          >
+            内製型
+          </button>
+        </div>
+      </div>
+      <button type="button" class="panel-toggle" id="panel-toggle" aria-controls="side" aria-expanded="true">
+        <svg class="i" aria-hidden="true"><use href="#i-info" /></svg>解説
+      </button>
+      <section class="people-control" aria-label="人数の設定">
+        <div class="slider">
+          <button type="button" id="minus" aria-label="1人減らす">−</button>
+          <input type="range" id="people-slider" min="0" max="4000" step="1" aria-label="スタジオの人数" />
+          <button type="button" id="plus" aria-label="1人増やす">＋</button>
+        </div>
+        <div class="ribbon" id="ribbon" role="group" aria-label="規模の段階"></div>
+      </section>
+    </header>
+    <main class="main">
+      <div
+        class="canvas"
+        id="canvas"
+        tabindex="0"
+        aria-label="組織図のキャンバス。ドラッグで移動、ホイールかピンチで拡大縮小、ダブルクリックで拡大、矢印キーで移動、0キーで全体、Wキーで幅に合わせる、Escで選択を解除"
+      >
+        <div class="world" id="world">
+          <svg id="tracks-back" aria-hidden="true"><g id="back-layer"></g></svg
+          ><svg id="tracks" aria-hidden="true">
+            <defs id="markers"></defs>
+            <g id="track-layer"></g>
+          </svg>
+        </div>
+        <div class="canvas-buttons">
+          <button type="button" id="fit-width">幅に合わせる</button
+          ><button type="button" id="fit-all">全体</button
+          ><button type="button" id="zoom-out" aria-label="縮小">−</button
+          ><button type="button" id="zoom-in" aria-label="拡大">＋</button>
+        </div>
+        <!-- 凡例：線の種類（押すとその線を出す・消す）と、線の向き、操作のヒント -->
+        <div class="float legend">
+          <div class="control-row" id="flow" role="group" aria-label="線の種類（押すと出す・消す）">
+            <button
+              type="button"
+              class="toggle"
+              data-flow="order"
+              aria-pressed="true"
+              title="管理・発注の線を出す／消す"
+            >
+              <svg class="line-sample" aria-hidden="true">
+                <path d="M0 4H26" stroke="#dfe3ea" stroke-width="3.5" /></svg
+              >発注
+            </button>
+            <button
+              type="button"
+              class="toggle"
+              data-flow="instruct"
+              aria-pressed="true"
+              title="内容の指示の線を出す／消す"
+            >
+              <svg class="line-sample" aria-hidden="true">
+                <path d="M0 4H26" stroke="#dfe3ea" stroke-width="2.5" stroke-dasharray="8 5" /></svg
+              >指示
+            </button>
+          </div>
+          <span class="legend-item" aria-hidden="true"
+            >出す人<svg viewBox="0 0 40 16" style="width: 40px">
+              <circle cx="5" cy="8" r="4.5" fill="#dfe3ea" />
+              <path d="M5 8H31" stroke="#dfe3ea" stroke-width="2" />
+              <path d="M29 3.5L38 8L29 12.5z" fill="#dfe3ea" /></svg
+            >受ける人</span
+          >
+          <span class="legend-item legend-hint">人のピクトグラム1つが1人</span>
+          <span class="legend-item legend-hint">カードを押すと詳細・行の見出しを押すとその作品だけ強調</span>
+        </div>
+      </div>
+      <aside class="side" id="side" aria-label="解説">
+        <div id="selection" class="selection"></div>
+        <h2 id="stage-name"></h2>
+        <p class="jobs" id="jobs"></p>
+        <p class="basis" id="basis"></p>
+        <div class="stats">
+          <div class="stat"><small>同時に回せる作品</small><b id="stat-works"></b></div>
+          <div class="stat">
+            <small>社内でできる工程</small><b><span id="stat-in">0</span>/12</b>
+            <div class="meter"><i id="stat-in-bar"></i></div>
+          </div>
+          <div class="stat">
+            <small>兼任している人</small><b><span id="stat-multi">0</span>人</b>
+          </div>
+          <div class="stat">
+            <small>社外に出す工程</small><b><span id="stat-out">0</span>工程</b>
+          </div>
+        </div>
+        <h3>工程ごとに、社内で持てるか</h3>
+        <div class="legend">
+          <span><i style="background: var(--in-house)"></i>内製</span
+          ><span><i style="background: var(--multi-role)"></i>兼任</span
+          ><span><i style="border: 1px dashed var(--outsourced)"></i>社外</span>
+        </div>
+        <div class="pipe" id="pipe"></div>
+        <div class="real" id="real"></div>
+        <h3>このモデルの前提と出典</h3>
+        <div class="notes">
+          <ul>
+            <li>
+              日本の商業アニメで主流の、2D手描き（デジタル作画を含む）の制作を想定した目安です。実際の体制や役職名、権限の範囲は会社・作品ごとに大きく違います。
+            </li>
+            <li>
+              「人数」は社員と、社内に席を置く業務委託をあわせた数です。フリーランスとして働くクリエイターの割合は、2019年の69.6%から2026年の36.5%まで下がりました（JAniCA）。それでもフリーランスのアニメーターに外注する会社は約7割あり、どの規模でも社外の個人に多くを頼ります。
+            </li>
+            <li>
+              指示系統は1本の木ではありません。プロデューサー → 制作デスク →
+              制作進行と下りる「管理・日程・発注」の線と、監督 → 演出 → 作画監督 → 原画 → 動画検査 →
+              動画と下りる「内容の指示・チェック」の線が別にあり、同じアニメーターが両方から指示を受けます。チェックは演出が先、作画監督が後とされますが、公開資料では確かめられず、工程によって順を変える会社もあります（推定）。
+            </li>
+            <li>
+              監督とプロデューサーは上下関係ではなく並列です。プロデューサーは起用・予算・日程を、監督は作品の内容を受け持ちます。
+            </li>
+            <li>
+              中規模以上では、作品ごとの制作ライン（P・デスク・進行）と、作画・仕上げ・撮影などの共通部門が交差するマトリクス型になります。公式に確認できる例として、MAPPAの「約10ラインの制作チーム」、J.C.STAFFの複数チームのローテーションがあります。
+            </li>
+            <li>
+              グロス請けの話数で、監督チェックや総作監チェックが元請側に戻るかどうかは、工程表や実務者の記述からの推定です。作品によって違います。小規模スタジオで代表が作画監督を兼ねる形も、公開情報から推定したモデルです。
+            </li>
+            <li>
+              2025年のアニメ制作市場（帝国データバンク、制作会社の売上の合計）は4,065億8,600万円で過去最高でした。制作会社は304社（2026年7月）で、正社員100人以下の会社が約9割を占めます。
+            </li>
+            <li>
+              元請と下請の立場は作品ごとに入れ替わることが多く、元請の約2割は10人以下の会社です。P・監督・進行だけを持ち、残りを外注して元請をする形もあります。この図の段階は、その人数でよく見られる形の目安です。「基本」の型がその人数で一番多い形とは限りません。人数ごとに、どこまで内製しているかの分布を示す統計は見つかっていないためです。上の「体制の型」で、外注型（P・監督・進行だけを持つ元請や、ラインを増やして工程を外に出す形）と内製型（ラインを絞り、工程を社内に持つ形）に切り替えられます。型ごとのライン数と人数の配分は、事例をもとにした推定です。
+            </li>
+            <li>
+              200人を超える段階は、公開されている大手の体制（MAPPAの局制と約10ライン、東映アニメーションのセグメント別の人数と子会社）をもとにした粗い目安です。行はラインではなく、ラインを束ねる制作スタジオです。局ごとの人数の比率、東京の外のスタジオ、ライン数（450人で約10本、1000人で約14本）は推定で、子会社の人数は含めていません。同じ人数でも、ufotable（正社員約250名）や京都アニメーションのように、ほぼ全工程を内製してラインを少なく保つ会社もあり、ライン数は人数より内製の度合いで決まります。
+            </li>
+          </ul>
+          <p>
+            出典：
+            <a href="https://www.jftc.go.jp/file/houdou/pressrelease/2025/dec/251224_eigaanime3.pdf"
+              >公正取引委員会 実態調査報告書（2025年12月）</a
+            >／
+            <a href="https://www.janica.jp/press/20170628_CJ-haifusiryo.pdf">JAniCA 制作工程の資料（2017）</a
+            >／
+            <a href="https://www.jil.go.jp/event/ro_forum/20201215/resume/03-jirei-janica.pdf"
+              >JAniCA 労働政策フォーラム資料（2020）</a
+            >／
+            <a href="https://www.sunrise-world.net/feature/feature.php?id=9110"
+              >サンライズ 河口佳高プロデューサーの解説</a
+            >／ <a href="https://ssl.jcstaff.co.jp/kyujin/shokai/01_seisaku.htm">J.C.STAFF 制作部の仕事</a>／
+            <a href="https://www.mappa.co.jp/company/">MAPPA 会社情報</a>／
+            <a href="https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100YEQC.pdf"
+              >東映アニメーション 有価証券報告書（2026年3月期）</a
+            >／ <a href="https://gamebiz.jp/news/428862">東映アニメーションの人材戦略（gamebiz）</a>／
+            <a href="https://gamebiz.jp/news/391999">IGポートの従業員数（gamebiz）</a>／
+            <a href="https://www.janica.jp/survey/survey2026Report.pdf"
+              >JAniCA「アニメーション制作者実態調査2026」</a
+            >／
+            <a href="https://www.meti.go.jp/policy/mono_info_service/contents/2026/0423/26042302-1.pdf"
+              >経済産業省 アニメ産業の報告書（2026年4月）</a
+            >／
+            <a href="https://www.tdb.co.jp/report/industry/20260819-animation25y/"
+              >帝国データバンク「アニメ制作市場」動向調査（2026年8月）</a
+            >／
+            <a href="https://www.jil.go.jp/institute/reports/2005/documents/025_shiryo.pdf"
+              >労働政策研究・研修機構 アニメ制作会社の事例（2005）</a
+            >／
+            <a href="https://www.gamebusiness.jp/article/2026/08/20/27751.html"
+              >帝国データバンク調査（GameBusiness.jp）</a
+            >／
+            <a href="https://www.pref.saitama.lg.jp/documents/225279/kichokoen.pdf"
+              >ヒューマンメディア講演資料（埼玉県）</a
+            >
+          </p>
+        </div>
+        <p class="notes" style="margin-top: 14px">
+          部署の人数配分と線の引き方は、上記の資料と一般的な制作体制をもとにした試算です。
+        </p>
+      </aside>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,500 @@
+/* キャンバスの中身 */
+.world {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+}
+.world > .item {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#tracks,
+#tracks-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: visible;
+  z-index: 4;
+  pointer-events: none;
+}
+#tracks-back {
+  z-index: 1;
+}
+#tracks .track,
+#tracks-back .track {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: stroke;
+  transition: opacity 0.2s;
+}
+#tracks .order,
+#tracks-back .order {
+  stroke-width: 3.5;
+}
+#tracks .instruct,
+#tracks-back .instruct {
+  stroke-width: 2.5;
+  stroke-dasharray: 8 6;
+}
+#tracks .outside,
+#tracks-back .outside {
+  stroke-width: 3.5;
+  stroke-dasharray: 0.5 7;
+}
+#tracks .affiliation {
+  stroke: #5a6170;
+  stroke-width: 1.5;
+  pointer-events: none;
+}
+#tracks .line-mgmt {
+  stroke: #e3e6ec;
+  stroke-width: 2;
+  pointer-events: none;
+}
+#tracks .in-dept {
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  pointer-events: none;
+  opacity: 0.5;
+}
+#tracks .in-dept.dim {
+  opacity: 0.06 !important;
+}
+/* 線を出す人の● */
+#tracks .source {
+  stroke: none;
+  transition: opacity 0.2s;
+}
+#tracks .dim,
+#tracks-back .dim {
+  opacity: 0.08;
+}
+#tracks .faint {
+  opacity: 0.45;
+}
+#tracks .drop {
+  stroke-dasharray: none !important;
+  stroke-width: 2.5 !important;
+}
+#tracks g.leg,
+#tracks-back g.leg {
+  transition: opacity 0.2s;
+}
+#tracks .off,
+#tracks-back .off {
+  display: none;
+}
+.wall {
+  z-index: 0;
+  border: 1.5px dashed #3e4450;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.018);
+}
+.wall-tag {
+  position: absolute;
+  top: -15px;
+  left: 22px;
+  padding: 2px 12px;
+  border-radius: 999px;
+  background: #0c0e12;
+  border: 1px solid #3e4450;
+  font-size: 15px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.outside-label {
+  z-index: 2;
+  font-size: 15px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.block {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #333945;
+  border-radius: 18px;
+}
+.block .block-head {
+  background: #171a21;
+  border-radius: 17px 17px 0 0;
+}
+.block .block-body {
+  background: #171a21;
+  border-radius: 0 0 17px 17px;
+}
+.block.empty {
+  border: 1.5px dashed #2c313b;
+}
+.block.empty .block-head,
+.block.empty .block-body,
+.block.partners .block-head,
+.block.partners .block-body {
+  background: #0c0e12;
+}
+.block.partners {
+  border: 1.5px dashed #4a505c;
+}
+.block-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 11px 12px;
+}
+.block-head .block-icon {
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border-radius: 9px;
+  background: #e9ecf2;
+  color: #14161b;
+  flex: none;
+}
+.block.empty .block-head .block-icon {
+  display: none;
+}
+.block.empty .block-head b {
+  color: var(--muted);
+}
+.block-head .block-title {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+.block-head b {
+  font-size: 16px;
+  line-height: 1.3;
+}
+.block-head small {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.35;
+}
+.block-head .block-count {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  font-size: 14px;
+  white-space: nowrap;
+  padding-top: 6px;
+}
+.block-heads {
+  position: relative;
+  border-block: 1px solid #262a33;
+  background: rgba(23, 26, 33, 0.86);
+}
+.block-heads > .card {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  min-height: 64px;
+}
+.block.empty .block-heads {
+  border-color: transparent;
+  background: rgba(12, 14, 18, 0.86);
+}
+.block.partners .block-heads {
+  border-color: transparent;
+  background: none;
+  order: 2;
+}
+.block.partners .block-body {
+  order: 1;
+}
+.block-body {
+  padding: 12px 10px;
+}
+.block.partners .block-body {
+  padding: 12px;
+}
+.block.empty .block-body {
+  padding: 0;
+}
+.block-pool {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.chips {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: 1px dashed #5a606c;
+  color: #d7dbe3;
+  font-size: 14px;
+  line-height: 1.3;
+}
+.chip svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  color: var(--muted);
+}
+.chip small {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+}
+.card {
+  position: relative;
+  z-index: 3;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 9px 11px;
+  transition: opacity 0.2s;
+}
+.card.dim {
+  opacity: 0.35 !important;
+}
+.world .card {
+  cursor: pointer;
+}
+.world .card:hover {
+  border-color: #6a7180;
+}
+.world .card.selected {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+.selection {
+  margin: 0 0 18px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px dashed var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
+.selection.on {
+  border: 1px solid #6a7180;
+  background: var(--bg-raised);
+  color: var(--ink);
+}
+.selection .selection-title {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.selection .selection-title b {
+  font-size: 18px;
+}
+.selection .selection-title span {
+  color: var(--muted);
+  font-size: 13px;
+}
+.selection .selection-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 8px 0;
+}
+.selection .selection-roles span {
+  font-size: 13px;
+  padding: 1px 7px;
+  border-radius: 6px;
+  background: #2a2f3a;
+}
+.selection dl {
+  margin: 8px 0 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 6px 10px;
+  font-size: 14px;
+}
+.selection dt {
+  color: var(--muted);
+  white-space: nowrap;
+}
+.selection dd {
+  margin: 0;
+}
+.selection dd i {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 5px;
+  vertical-align: 0;
+}
+.selection .jump {
+  margin: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  text-decoration: underline dotted #6a7180;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.selection .jump:hover {
+  color: #fff;
+  text-decoration-color: #fff;
+}
+.selection #selection-clear {
+  margin-top: 10px;
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+}
+.card[data-work] {
+  background: color-mix(in oklab, var(--work-color) 17%, var(--card));
+  border-color: color-mix(in oklab, var(--work-color) 28%, var(--border));
+}
+.card.client[data-work] {
+  background: color-mix(in oklab, var(--work-color) 12%, #0c0e12);
+}
+.card.client {
+  background: #0c0e12;
+  border-style: dashed;
+}
+.card.chained::before {
+  content: '';
+  position: absolute;
+  left: 22px;
+  top: -17px;
+  height: 16px;
+  border-left: 2px dashed #dfe3ea;
+}
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card-head .card-icon {
+  color: var(--muted);
+}
+.card[data-work] .card-head .card-icon {
+  color: var(--work-color);
+}
+.card-head b {
+  font-size: 15px;
+  line-height: 1.3;
+}
+.card-head .card-count {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  font-size: 14px;
+  white-space: nowrap;
+}
+.card > .badge:not([hidden]) {
+  display: inline-block;
+  margin-top: 4px;
+}
+.badge {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--multi-role);
+  border: 1px solid var(--multi-role);
+  border-radius: 999px;
+  padding: 0 7px;
+  white-space: nowrap;
+}
+.sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+.roles span {
+  font-size: 13px;
+  padding: 1px 7px;
+  border-radius: 6px;
+  background: #2a2f3a;
+  color: #d6dae2;
+}
+.people {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  margin-top: 7px;
+}
+.people svg {
+  width: 16px;
+  height: 16px;
+  fill: #c5cbd6;
+}
+.card.multi-role .people svg {
+  fill: var(--multi-role);
+}
+.card[data-work] .people svg {
+  fill: var(--work-color);
+}
+.rows {
+  margin: 7px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 4px;
+}
+.row {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 7px;
+  border-radius: 6px;
+  background: #2a2f3a;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.row + .row::before {
+  content: '→';
+  color: var(--work-color);
+  font-weight: 700;
+  margin-right: 1px;
+}
+.row > svg.i {
+  display: none;
+}
+.row .people {
+  margin: 0;
+  flex-wrap: nowrap;
+}
+.row .people svg {
+  width: 13px;
+  height: 13px;
+}
+.rows:empty,
+.roles:empty,
+.sub:empty,
+.people:empty {
+  display: none;
+}
+.selection .selection-notes {
+  font-size: 13px;
+  color: var(--multi-role);
+  margin-top: 2px;
+}
+.selection .selection-empty {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+/* キーボードで移ったカード */
+.world .card:focus-visible {
+  outline: 2px dashed var(--accent);
+  outline-offset: 3px;
+}
