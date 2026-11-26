@@ -28,27 +28,28 @@ npm run check:model   # 全人数×全型で、役職の人数の合計が人数
 
 ## ファイル
 
-| ファイル | 役割 |
-| --- | --- |
-| `src/data/constants.ts` | 人数の上限・作品の色・部署・工程・並び順 |
-| `src/data/units.ts` | 役職・社外の相手の型と、作る関数 |
-| `src/data/stages.ts` | 規模の段階ごとの体制と解説（基本の型） |
-| `src/data/variants.ts` | 外注型・内製型で差し替える部分 |
-| `src/model.ts` | 人数から体制を求める |
-| `src/plan.ts` | 路線図の形（行・列・担当者・線の区間） |
-| `src/keys.ts` | 部品を指すキーの決まり |
-| `src/state.ts` | 表示の状態（線の切り替え・絞り込み・選択） |
-| `src/view/world.ts` | 部品をそろえ、配置して、線を引く |
-| `src/view/layout.ts` | 配置の計算 |
-| `src/view/spring.ts` | ばねのアニメーション |
-| `src/view/tracks.ts` | 線を引く |
-| `src/view/cards.ts` | カードと部署の DOM |
-| `src/view/highlight.ts` | 強調表示（薄く・隠す・選択枠） |
-| `src/view/selection.ts` | 選択と解説パネルの相手一覧 |
-| `src/view/camera.ts` | 移動・拡大縮小 |
-| `src/view/panel.ts` | 人数バーと解説パネル |
-| `src/view/flow.ts` | 凡例の「発注」「指示」で線を出す・消す |
-| `scripts/check-model.mjs` | モデルの人数の整合チェック |
-| `public/_headers` | Cloudflare が付けるセキュリティのヘッダー |
+| ファイル                  | 役割                                                                                              |
+| ------------------------- | ------------------------------------------------------------------------------------------------- |
+| `src/data/constants.ts`   | 人数の上限・作品の色・部署・工程・並び順                                                          |
+| `src/data/units.ts`       | 役職・社外の相手の型と、作る関数                                                                  |
+| `src/data/stages.ts`      | 規模の段階ごとの体制と解説（基本の型）                                                            |
+| `src/data/variants.ts`    | 外注型・内製型で差し替える部分                                                                    |
+| `src/model.ts`            | 人数から体制を求める                                                                              |
+| `src/plan.ts`             | 路線図の形（行・列・担当者・線の区間）                                                            |
+| `src/keys.ts`             | 部品を指すキーの決まり                                                                            |
+| `src/state.ts`            | 表示の状態（線の切り替え・絞り込み・選択）                                                        |
+| `src/view/world.ts`       | 部品をそろえ、配置して、線を引く                                                                  |
+| `src/view/layout.ts`      | 配置の計算                                                                                        |
+| `src/view/spring.ts`      | ばねのアニメーション                                                                              |
+| `src/view/tracks.ts`      | 線を引く                                                                                          |
+| `src/view/cards.ts`       | カードと部署の DOM                                                                                |
+| `src/view/highlight.ts`   | 強調表示（薄く・隠す・選択枠）                                                                    |
+| `src/view/selection.ts`   | 選択と解説パネルの相手一覧                                                                        |
+| `src/view/camera.ts`      | 移動・拡大縮小                                                                                    |
+| `src/view/panel.ts`       | 人数バーと解説パネル                                                                              |
+| `src/view/flow.ts`        | 凡例の「発注」「指示」で線を出す・消す                                                            |
+| `scripts/check-model.mjs` | モデルの人数の整合チェック                                                                        |
+| `public/_headers`         | Cloudflare が付けるセキュリティのヘッダー                                                         |
+| `public/favicon.svg`      | アイコンの元。`favicon.ico`（16・32・48）と `apple-touch-icon.png`（180、角丸なし）はここから作る |
 
 部署の人数配分と線の引き方は、公開資料と一般的な制作体制をもとにした試算です。
